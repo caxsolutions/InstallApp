@@ -196,5 +196,25 @@ class InstallApplications:
 
         self.addConsole(salida8, obj)
 
+    def installAppPencilProject(self, obj):
+        self.addConsole("Descargando Pencil project", obj)
+
+        proceso8 = subprocess.Popen('wget -c https://storage.googleapis.com/google-code-archive-downloads/v2/code.google.com/evoluspencil/evoluspencil_2.0.5_all.deb -O pencilproject.deb', shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        salida8 = proceso8.stdout.read()
+        proceso8.stdout.close()
+        salida8 = salida8.decode(sys.getdefaultencoding())
+
+        self.addConsole(salida8, obj)
+
+        self.addConsole("Instalando Pencil project", obj)
+        proceso = subprocess.Popen('gdebi --n pencilproject.deb', shell=True,stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        salida = proceso.stdout.read()
+        proceso.stdout.close()
+        salida = salida.decode(sys.getdefaultencoding())
+
+        self.addConsole(salida, obj)
+
+        subprocess.Popen('rm -rf pencilproject.deb', shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+
     def addConsole(self, mensaje, obj):
         Progressbar().console_progress(obj, mensaje)

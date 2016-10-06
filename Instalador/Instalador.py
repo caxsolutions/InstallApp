@@ -18,47 +18,61 @@ class Buglump:
 
     def on_btnInstalar_clicked(self, widget, data=None):
 
-        InstallApplications().installAppUpdate(self)
-        InstallApplications().installAppGdebi(self)
+        threadExec = threading.Thread(target=Progressbar().toggle_activity_mode,args=(self,))
+        threadExec.start()
 
-        if self.chbTerminator.get_active():
-            InstallApplications().installAppTerminator(self)
+        if threadExec.is_alive:
 
-        if self.chbHtop.get_active():
-            InstallApplications().installAppHtop(self)
+            InstallApplications().installAppUpdate(self)
+            InstallApplications().installAppGdebi(self)
 
-        if self.chbMidComm.get_active():
-            InstallApplications().installAppMidComm(self)
+            if self.chbTerminator.get_active():
+                InstallApplications().installAppTerminator(self)
 
-        if self.chbPgadmin.get_active():
-            InstallApplications().installAppPgadmin3(self)
+            if self.chbHtop.get_active():
+                InstallApplications().installAppHtop(self)
 
-        if self.chbKazam.get_active():
-            InstallApplications().installAppKazam(self)
+            if self.chbMidComm.get_active():
+                InstallApplications().installAppMidComm(self)
 
-        if self.chbVirtualbox.get_active():
-            InstallApplications().installAppVirtualbox(self)
+            if self.chbPgadmin.get_active():
+                InstallApplications().installAppPgadmin3(self)
 
-        if self.chbGooglechrome.get_active():
-            InstallApplications().installAppGooglechrome(self)
+            if self.chbKazam.get_active():
+                InstallApplications().installAppKazam(self)
 
-        if self.chbAngryScanner.get_active():
-            InstallApplications().installApAngryScanner(self)
+            if self.chbVirtualbox.get_active():
+                InstallApplications().installAppVirtualbox(self)
 
-        if self.chbMegasync.get_active():
-            InstallApplications().installApMegasync(self)
+            if self.chbGooglechrome.get_active():
+                InstallApplications().installAppGooglechrome(self)
 
-        if self.chbMoc.get_active():
-            InstallApplications().installAppMoc(self)
+            if self.chbAngryScanner.get_active():
+                InstallApplications().installApAngryScanner(self)
 
-        if self.chbFuentesWindows.get_active():
-            InstallApplications().installAppFuentesWindows(self)
+            if self.chbMegasync.get_active():
+                InstallApplications().installApMegasync(self)
 
-        if self.chbReproVlc.get_active():
-            InstallApplications().installAppReproVlc(self)
+            if self.chbMoc.get_active():
+                InstallApplications().installAppMoc(self)
 
+            if self.chbFuentesWindows.get_active():
+                InstallApplications().installAppFuentesWindows(self)
+
+            if self.chbReproVlc.get_active():
+                InstallApplications().installAppReproVlc(self)
+
+            if self.chbPencilProject.get_active():
+                InstallApplications().installAppPencilProject(self)
+
+    def on_btnAbout_clicked(self, widget, data=None):
+        self.aboutdialog1.show()
+
+    def on_aboutdialog1_button_press_event(self, widget, data=None):
+        print 123
 
     def on_btnInstalar_clicked_test(self, widget, data=None):
+        print 123
 
         #threadExec = threading.Thread(target=Progressbar().toggle_activity_mode,args=(self,))
         #threadExec.start()
@@ -69,15 +83,6 @@ class Buglump:
         #    if self.chbTerminator.get_active():
         #        InstallTerminator().installApp()
                 #Progressbar().destroy_progress(self)
-
-
-        if self.chbTerminator.set_active:
-            threadExec = threading.Thread(target=InstallTerminator().installApp,args=())
-            threadExec.start()
-
-            if threadExec.is_alive:
-                print 123
-                ejecutores.Progressbar().toggle_activity_mode(self)
 
 
     def gtk_main_quit(self, menuitem):
@@ -102,6 +107,7 @@ class Buglump:
         self.chbReproVlc.set_active(0)
         self.chbFuentesWindows.set_active(0)
         self.chbMoc.set_active(0)
+        self.chbPencilProject.set_active(0)
 
     def on_button4_clicked(self, widget, data=None):
         self.chbTerminator.set_active(1)
@@ -116,6 +122,7 @@ class Buglump:
         self.chbReproVlc.set_active(1)
         self.chbFuentesWindows.set_active(1)
         self.chbMoc.set_active(1)
+        self.chbPencilProject.set_active(1)
 
     def on_btnCancelar_clicked(self, widget, data=None):
         Progressbar().destroy_progress(self)
@@ -142,6 +149,7 @@ class Buglump:
         #self.vbox1.add(self.scroll)
 
         self.txtPassword = self.builder.get_object("txtPassword")
+        self.btnAbout = self.builder.get_object("btnAbout")
         self.btnTodos = self.builder.get_object("btnTodos")
         self.btnlimpiar = self.builder.get_object("btnlimpiar")
         self.btnInstalar = self.builder.get_object("btnInstalar")
@@ -160,6 +168,7 @@ class Buglump:
         self.chbReproVlc = self.builder.get_object("chbReproVlc")
         self.chbFuentesWindows = self.builder.get_object("chbFuentesWindows")
         self.chbMoc = self.builder.get_object("chbMoc")
+        self.chbPencilProject = self.builder.get_object("chbPencilProject")
 
         self.textarearesumen = self.builder.get_object("textarearesumen")
         self.textarearesumen.modify_base(gtk.STATE_NORMAL, gtk.gdk.color_parse('#000000'))
@@ -167,6 +176,8 @@ class Buglump:
         self.textarearesumen.modify_font(pango.FontDescription('Monospace 7'))
 
         self.progressbar1 = self.builder.get_object('progressbar1')
+
+        self.aboutdialog1 = self.builder.get_object('aboutdialog1')
 
         self.window.show_all()
 
