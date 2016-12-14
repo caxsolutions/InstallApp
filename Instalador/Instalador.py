@@ -2,9 +2,10 @@
 
 from ejecutores.InstallApplications import InstallApplications
 from ejecutores.Progressbar import Progressbar
+from ejecutores.CompilarProyecto import CompilarProyecto
 
 try:
-    import pygtk, gobject, pango, vte, threading
+    import pygtk, gobject, pango, vte, threading, os
     pygtk.require('2.0')
 except:
     pass
@@ -18,72 +19,110 @@ class Buglump:
 
     def on_btnInstalar_clicked(self, widget, data=None):
 
-        threadExec = threading.Thread(target=Progressbar().toggle_activity_mode,args=(self,))
-        threadExec.start()
-
-        if threadExec.is_alive:
-
-            InstallApplications().installAppUpdate(self)
-            InstallApplications().installAppGdebi(self)
-
-            if self.chbTerminator.get_active():
-                InstallApplications().installAppTerminator(self)
-
-            if self.chbHtop.get_active():
-                InstallApplications().installAppHtop(self)
-
-            if self.chbMidComm.get_active():
-                InstallApplications().installAppMidComm(self)
-
-            if self.chbPgadmin.get_active():
-                InstallApplications().installAppPgadmin3(self)
-
-            if self.chbKazam.get_active():
-                InstallApplications().installAppKazam(self)
-
-            if self.chbVirtualbox.get_active():
-                InstallApplications().installAppVirtualbox(self)
-
-            if self.chbGooglechrome.get_active():
-                InstallApplications().installAppGooglechrome(self)
-
-            if self.chbAngryScanner.get_active():
-                InstallApplications().installApAngryScanner(self)
-
-            if self.chbMegasync.get_active():
-                InstallApplications().installApMegasync(self)
-
-            if self.chbMoc.get_active():
-                InstallApplications().installAppMoc(self)
-
-            if self.chbFuentesWindows.get_active():
-                InstallApplications().installAppFuentesWindows(self)
-
-            if self.chbReproVlc.get_active():
-                InstallApplications().installAppReproVlc(self)
-
-            if self.chbPencilProject.get_active():
-                InstallApplications().installAppPencilProject(self)
-
-    def on_btnAbout_clicked(self, widget, data=None):
-        self.aboutdialog1.show()
-
-    def on_aboutdialog1_button_press_event(self, widget, data=None):
-        print 123
-
-    def on_btnInstalar_clicked_test(self, widget, data=None):
-        print 123
-
         #threadExec = threading.Thread(target=Progressbar().toggle_activity_mode,args=(self,))
         #threadExec.start()
 
         #if threadExec.is_alive:
-        #    print "se esta ejecutando progressbar"
-            #instalando terminator
-        #    if self.chbTerminator.get_active():
-        #        InstallTerminator().installApp()
-                #Progressbar().destroy_progress(self)
 
+        InstallApplications().installAppUpdate(self)
+        InstallApplications().installApp(self, "gdebi", "Gdebi paquetes de debian")
+
+        if self.chbTerminator.get_active():
+            InstallApplications().installApp(self, "terminator", "Terminator")
+
+        if self.chbHtop.get_active():
+            InstallApplications().installApp(self, "htop", "Htop")
+
+        if self.chbMidComm.get_active():
+            InstallApplications().installAppMidComm(self)
+
+        if self.chbPgadmin.get_active():
+            InstallApplications().installApp(self, "pgadmin3", "Pgadmin3")
+
+        if self.chbKazam.get_active():
+            InstallApplications().installApp(self, "kazam", "kazam")
+
+        if self.chbVirtualbox.get_active():
+            InstallApplications().installApp(self, "virtualbox", "VirtualBox")
+
+        if self.chbGooglechrome.get_active():
+            InstallApplications().installAppDescargar(self, "https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb", "Google chrome")
+
+        if self.chbAngryScanner.get_active():
+            InstallApplications().installAppDescargar(self, "https://github.com/angryziber/ipscan/releases/download/3.4.2/ipscan_3.4.2_amd64.deb", "Angry Ip Scanner")
+
+        if self.chbMegasync.get_active():
+            InstallApplications().installAppDescargar(self, "https://mega.nz/linux/MEGAsync/xUbuntu_14.04/amd64/megasync-xUbuntu_14.04_amd64.deb", "Megasync")
+
+        if self.chbMoc.get_active():
+            InstallApplications().installApp(self, "moc", "Music on consol")
+
+        if self.chbFuentesWindows.get_active():
+            InstallApplications().installAppFuentesWindows(self)
+
+        if self.chbReproVlc.get_active():
+            InstallApplications().installApp(self, "vlc", "Reproductor de musica VLC")
+
+        if self.chbPencilProject.get_active():
+            InstallApplications().installAppDescargar(self, "https://storage.googleapis.com/google-code-archive-downloads/v2/code.google.com/evoluspencil/evoluspencil_2.0.5_all.deb", "Pencil project")
+
+        if self.chbAntCompilerJava.get_active():
+            InstallApplications().installApp(self, "ant", "ant compilador de java")
+
+        if self.chbGladeGtk.get_active():
+            InstallApplications().installApp(self, "glade", "Glade gtk")
+
+        if self.chbNetbeans.get_active():
+            InstallApplications().installAppDescargar(self, "http://download.netbeans.org/netbeans/8.2/final/bundles/netbeans-8.2-linux.sh", "Netbeans IDE")
+
+        # if self.chbPycharmIDE.get_active():
+        #     InstallApplications().installAppPycharmIDE(self)
+        #
+        # if self.chbDebeaver.get_active():
+        #     InstallApplications().installAppDebeaver(self)
+        #
+        if self.chbHaroopad.get_active():
+            InstallApplications().installApp(self, "haroopad", "haroopad")
+
+        if self.chbQtQr.get_active():
+            InstallApplications().installApp(self, "qtqr", "QtQr code")
+
+        if self.chbSkype.get_active():
+            InstallApplications().installAppDescargar(self, "https://get.skype.com/go/getskype-linux-beta-ubuntu-64", "Skype")
+
+        # if self.chbTeamViewer.get_active():
+        #     InstallApplications().installAppTeamViewer(self)
+
+    def on_btnAbout_clicked(self, widget, data=None):
+        self.aboutdialog1.show()
+
+    #############################################################################################
+    #################### tab de compilacion #####################################################
+    def on_btnSeleccProjectComp_clicked(self, widget, data=None):
+        self.filechooserdialog1.show()
+
+    def on_btnAceptarBuildProject_clicked(self, widget, data=None):
+        ruta = self.filechooserdialog1.get_filename()
+
+        self.filechooserdialog1.hide()
+
+        if ruta != None:
+            self.lblRutaProyectoCompilar.set_text(ruta)
+            self.dialogConfirmCompilar.show()
+            self.rutaCompilacionProyecto = ruta
+
+    def on_btnCancelarBuildProject_clicked(self, widget, data=None):
+        self.filechooserdialog1.hide()
+
+    def on_btnAceptarConfirmCompilar_clicked(self, widget, data=None):
+
+        if self.rutaCompilacionProyecto != None:
+            CompilarProyecto().compilarProyectoWebRfast9(self, self.rutaCompilacionProyecto)
+            self.dialogConfirmCompilar.hide()
+
+    def on_btnCancelarConfirmCompilar_clicked(self, widget, data=None):
+        self.dialogConfirmCompilar.hide()
+    #############################################################################################
 
     def gtk_main_quit(self, menuitem):
         gtk.main_quit()
@@ -108,6 +147,15 @@ class Buglump:
         self.chbFuentesWindows.set_active(0)
         self.chbMoc.set_active(0)
         self.chbPencilProject.set_active(0)
+        self.chbAntCompilerJava.set_active(0)
+        self.chbGladeGtk.set_active(0)
+        self.chbNetbeans.set_active(0)
+        self.chbPycharmIDE.set_active(0)
+        self.chbHaroopad.set_active(0)
+        self.chbDebeaver.set_active(0)
+        self.chbQtQr.set_active(0)
+        self.chbSkype.set_active(0)
+        self.chbTeamViewer.set_active(0)
 
     def on_button4_clicked(self, widget, data=None):
         self.chbTerminator.set_active(1)
@@ -123,6 +171,15 @@ class Buglump:
         self.chbFuentesWindows.set_active(1)
         self.chbMoc.set_active(1)
         self.chbPencilProject.set_active(1)
+        self.chbAntCompilerJava.set_active(1)
+        self.chbGladeGtk.set_active(1)
+        self.chbNetbeans.set_active(1)
+        self.chbPycharmIDE.set_active(1)
+        self.chbHaroopad.set_active(1)
+        self.chbDebeaver.set_active(1)
+        self.chbQtQr.set_active(1)
+        self.chbSkype.set_active(1)
+        self.chbTeamViewer.set_active(1)
 
     def on_btnCancelar_clicked(self, widget, data=None):
         Progressbar().destroy_progress(self)
@@ -131,9 +188,12 @@ class Buglump:
         self.on_window1_destroy(widget, None)
 
     def __init__(self):
+
+        #if not os.geteuid() == 0:
+
         self.timer = 0
         #self.threadExec = None
-        self.gladefile = "glade/instalador.glade"
+        self.gladefile = "/exp/PYTHON_DEV/InstallApp/Instalador/glade/instalador.glade"
         self.builder = gtk.Builder()
         self.builder.add_from_file(self.gladefile)
         self.builder.connect_signals(self)
@@ -169,6 +229,16 @@ class Buglump:
         self.chbFuentesWindows = self.builder.get_object("chbFuentesWindows")
         self.chbMoc = self.builder.get_object("chbMoc")
         self.chbPencilProject = self.builder.get_object("chbPencilProject")
+        self.chbAntCompilerJava = self.builder.get_object("chbAntCompilerJava")
+
+        self.chbGladeGtk = self.builder.get_object("chbGladeGtk")
+        self.chbNetbeans = self.builder.get_object("chbNetbeans")
+        self.chbPycharmIDE = self.builder.get_object("chbPycharmIDE")
+        self.chbHaroopad = self.builder.get_object("chbHaroopad")
+        self.chbDebeaver = self.builder.get_object("chbDebeaver")
+        self.chbQtQr = self.builder.get_object("chbQtQr")
+        self.chbSkype = self.builder.get_object("chbSkype")
+        self.chbTeamViewer = self.builder.get_object("chbTeamViewer")
 
         self.textarearesumen = self.builder.get_object("textarearesumen")
         self.textarearesumen.modify_base(gtk.STATE_NORMAL, gtk.gdk.color_parse('#000000'))
@@ -177,10 +247,24 @@ class Buglump:
 
         self.progressbar1 = self.builder.get_object('progressbar1')
 
+        ##############################################################
+        ################## tab compilardor ###########################
+        self.rutaCompilacionProyecto = None
+        self.btnSeleccProjectComp = self.builder.get_object('btnSeleccProjectComp')
+        self.filechooserdialog1 = self.builder.get_object('filechooserdialog1')
+        self.btnAceptarBuildProject = self.builder.get_object("btnAceptarBuildProject")
+        self.btnCancelarBuildProject = self.builder.get_object("btnCancelarBuildProject")
+
+        self.dialogConfirmCompilar = self.builder.get_object('dialogConfirmCompilar')
+        self.lblRutaProyectoCompilar = self.builder.get_object('lblRutaProyectoCompilar')
+        self.btnCancelarConfirmCompilar = self.builder.get_object('btnCancelarConfirmCompilar')
+        self.btnAceptarConfirmCompilar = self.builder.get_object('btnAceptarConfirmCompilar')
+
+        ##############################################################
+        ################## dialog del about ##########################
         self.aboutdialog1 = self.builder.get_object('aboutdialog1')
 
         self.window.show_all()
-
 
 if __name__ == "__main__":
     main = Buglump()
