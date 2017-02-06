@@ -52,7 +52,7 @@ class Buglump:
             InstallApplications().installAppDescargar(self, "https://github.com/angryziber/ipscan/releases/download/3.4.2/ipscan_3.4.2_amd64.deb", "Angry Ip Scanner")
 
         if self.chbMegasync.get_active():
-            InstallApplications().installAppDescargar(self, "https://mega.nz/linux/MEGAsync/xUbuntu_14.04/amd64/megasync-xUbuntu_14.04_amd64.deb", "Megasync")
+            InstallApplications().installAppDescargar(self, "https://mega.nz/linux/MEGAsync/xUbuntu_16.04/amd64/megasync-xUbuntu_16.04_amd64.deb", "Megasync")
 
         if self.chbMoc.get_active():
             InstallApplications().installApp(self, "moc", "Music on consol")

@@ -235,3 +235,510 @@ compilar-main:
 BUILD SUCCESSFUL
 Total time: 19 seconds
 
+
+-------------------------------------------
+Compilando el proyecto en la ruta /exp/JAVA_DEV_RFAST/RFAST9_trunk/rfast9
+
+-------------------------------------------
+Buildfile: /exp/JAVA_DEV_RFAST/RFAST9_trunk/rfast9/build.xml
+
+clean:
+
+build-subprojects:
+
+init:
+    [mkdir] Created dir: /exp/JAVA_DEV_RFAST/RFAST9_trunk/rfast9.modelo/bin
+     [copy] Copying 430 files to /exp/JAVA_DEV_RFAST/RFAST9_trunk/rfast9.modelo/bin
+
+build-project:
+     [echo] rfast9.modelo: /exp/JAVA_DEV_RFAST/RFAST9_trunk/rfast9.modelo/build.xml
+    [javac] Compiling 430 source files to /exp/JAVA_DEV_RFAST/RFAST9_trunk/rfast9.modelo/bin
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 1.6
+    [javac] 1 warning
+
+init:
+    [mkdir] Created dir: /exp/JAVA_DEV_RFAST/RFAST9_trunk/rfast9.general/bin
+
+build-project:
+     [echo] rfast9.general: /exp/JAVA_DEV_RFAST/RFAST9_trunk/rfast9.general/build.xml
+    [javac] Compiling 1692 source files to /exp/JAVA_DEV_RFAST/RFAST9_trunk/rfast9.general/bin
+    [javac] Note: Some input files use or override a deprecated API.
+    [javac] Note: Recompile with -Xlint:deprecation for details.
+    [javac] Note: Some input files use unchecked or unsafe operations.
+    [javac] Note: Recompile with -Xlint:unchecked for details.
+
+init:
+    [mkdir] Created dir: /exp/JAVA_DEV_RFAST/RFAST9_trunk/rfast9.logica/bin
+
+build-project:
+     [echo] rfast9.logica: /exp/JAVA_DEV_RFAST/RFAST9_trunk/rfast9.logica/build.xml
+    [javac] Compiling 898 source files to /exp/JAVA_DEV_RFAST/RFAST9_trunk/rfast9.logica/bin
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 1.6
+    [javac] /exp/JAVA_DEV_RFAST/RFAST9_trunk/rfast9.logica/src/com/rfast9/logica/componente/ImprimirLogic.java:30: error: package net.sf.jxls.exception does not exist
+    [javac] import net.sf.jxls.exception.ParsePropertyException;
+    [javac]                             ^
+    [javac] /exp/JAVA_DEV_RFAST/RFAST9_trunk/rfast9.logica/src/com/rfast9/logica/componente/ImprimirLogic.java:31: error: package net.sf.jxls.transformer does not exist
+    [javac] import net.sf.jxls.transformer.XLSTransformer;
+    [javac]                               ^
+    [javac] /exp/JAVA_DEV_RFAST/RFAST9_trunk/rfast9.logica/src/com/rfast9/logica/componente/ImprimirLogic.java:37: error: package org.apache.poi.openxml4j.exceptions does not exist
+    [javac] import org.apache.poi.openxml4j.exceptions.InvalidFormatException;
+    [javac]                                           ^
+    [javac] /exp/JAVA_DEV_RFAST/RFAST9_trunk/rfast9.logica/src/com/rfast9/logica/componente/ImprimirLogic.java:49: error: package org.apache.poi.xslf.model.geom does not exist
+    [javac] import org.apache.poi.xslf.model.geom.Context;
+    [javac]                                      ^
+    [javac] /exp/JAVA_DEV_RFAST/RFAST9_trunk/rfast9.logica/src/com/rfast9/logica/util/ReporteUtil.java:45: error: package net.sf.jxls.exception does not exist
+    [javac] import net.sf.jxls.exception.ParsePropertyException;
+    [javac]                             ^
+    [javac] /exp/JAVA_DEV_RFAST/RFAST9_trunk/rfast9.logica/src/com/rfast9/logica/util/ReporteUtil.java:46: error: package net.sf.jxls.transformer does not exist
+    [javac] import net.sf.jxls.transformer.XLSTransformer;
+    [javac]                               ^
+    [javac] /exp/JAVA_DEV_RFAST/RFAST9_trunk/rfast9.logica/src/com/rfast9/logica/util/ReporteUtil.java:52: error: package org.apache.poi.openxml4j.exceptions does not exist
+    [javac] import org.apache.poi.openxml4j.exceptions.InvalidFormatException;
+    [javac]                                           ^
+    [javac] /exp/JAVA_DEV_RFAST/RFAST9_trunk/rfast9.logica/src/com/rfast9/logica/componente/ImprimirLogic.java:839: error: cannot find symbol
+    [javac]             XLSTransformer transformer = new XLSTransformer();
+    [javac]             ^
+    [javac]   symbol:   class XLSTransformer
+    [javac]   location: class ImprimirLogic
+    [javac] /exp/JAVA_DEV_RFAST/RFAST9_trunk/rfast9.logica/src/com/rfast9/logica/componente/ImprimirLogic.java:839: error: cannot find symbol
+    [javac]             XLSTransformer transformer = new XLSTransformer();
+    [javac]                                              ^
+    [javac]   symbol:   class XLSTransformer
+    [javac]   location: class ImprimirLogic
+    [javac] /exp/JAVA_DEV_RFAST/RFAST9_trunk/rfast9.logica/src/com/rfast9/logica/componente/ImprimirLogic.java:857: error: cannot find symbol
+    [javac] 		} catch (ParsePropertyException e) {
+    [javac] 		         ^
+    [javac]   symbol:   class ParsePropertyException
+    [javac]   location: class ImprimirLogic
+    [javac] /exp/JAVA_DEV_RFAST/RFAST9_trunk/rfast9.logica/src/com/rfast9/logica/componente/ImprimirLogic.java:859: error: cannot find symbol
+    [javac] 		} catch (InvalidFormatException e) {
+    [javac] 		         ^
+    [javac]   symbol:   class InvalidFormatException
+    [javac]   location: class ImprimirLogic
+    [javac] /exp/JAVA_DEV_RFAST/RFAST9_trunk/rfast9.logica/src/com/rfast9/logica/util/ReporteUtil.java:197: warning: non-varargs call of varargs method with inexact argument type for last parameter;
+    [javac] 							Object resultado = method.invoke(t, null);
+    [javac] 							                                    ^
+    [javac]   cast to Object for a varargs call
+    [javac]   cast to Object[] for a non-varargs call and to suppress this warning
+    [javac] Note: /exp/JAVA_DEV_RFAST/RFAST9_trunk/rfast9.logica/src/com/rfast9/logica/contabilidad/P18cuentabancariaLogic.java uses or overrides a deprecated API.
+    [javac] Note: Recompile with -Xlint:deprecation for details.
+    [javac] Note: Some input files use unchecked or unsafe operations.
+    [javac] Note: Recompile with -Xlint:unchecked for details.
+    [javac] 11 errors
+    [javac] 2 warnings
+
+
+-------------------------------------------
+Compilando el proyecto en la ruta /exp/JAVA_DEV_RFAST/RFAST9_trunk/rfast9
+
+-------------------------------------------
+Buildfile: /exp/JAVA_DEV_RFAST/RFAST9_trunk/rfast9/build.xml
+
+clean:
+
+build-subprojects:
+
+init:
+
+build-project:
+     [echo] rfast9.modelo: /exp/JAVA_DEV_RFAST/RFAST9_trunk/rfast9.modelo/build.xml
+
+init:
+
+build-project:
+     [echo] rfast9.general: /exp/JAVA_DEV_RFAST/RFAST9_trunk/rfast9.general/build.xml
+
+init:
+
+build-project:
+     [echo] rfast9.logica: /exp/JAVA_DEV_RFAST/RFAST9_trunk/rfast9.logica/build.xml
+    [javac] Compiling 898 source files to /exp/JAVA_DEV_RFAST/RFAST9_trunk/rfast9.logica/bin
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 1.6
+    [javac] /exp/JAVA_DEV_RFAST/RFAST9_trunk/rfast9.logica/src/com/rfast9/logica/componente/ImprimirLogic.java:30: error: package net.sf.jxls.exception does not exist
+    [javac] import net.sf.jxls.exception.ParsePropertyException;
+    [javac]                             ^
+    [javac] /exp/JAVA_DEV_RFAST/RFAST9_trunk/rfast9.logica/src/com/rfast9/logica/componente/ImprimirLogic.java:31: error: package net.sf.jxls.transformer does not exist
+    [javac] import net.sf.jxls.transformer.XLSTransformer;
+    [javac]                               ^
+    [javac] /exp/JAVA_DEV_RFAST/RFAST9_trunk/rfast9.logica/src/com/rfast9/logica/componente/ImprimirLogic.java:37: error: package org.apache.poi.openxml4j.exceptions does not exist
+    [javac] import org.apache.poi.openxml4j.exceptions.InvalidFormatException;
+    [javac]                                           ^
+    [javac] /exp/JAVA_DEV_RFAST/RFAST9_trunk/rfast9.logica/src/com/rfast9/logica/componente/ImprimirLogic.java:49: error: package org.apache.poi.xslf.model.geom does not exist
+    [javac] import org.apache.poi.xslf.model.geom.Context;
+    [javac]                                      ^
+    [javac] /exp/JAVA_DEV_RFAST/RFAST9_trunk/rfast9.logica/src/com/rfast9/logica/util/ReporteUtil.java:45: error: package net.sf.jxls.exception does not exist
+    [javac] import net.sf.jxls.exception.ParsePropertyException;
+    [javac]                             ^
+    [javac] /exp/JAVA_DEV_RFAST/RFAST9_trunk/rfast9.logica/src/com/rfast9/logica/util/ReporteUtil.java:46: error: package net.sf.jxls.transformer does not exist
+    [javac] import net.sf.jxls.transformer.XLSTransformer;
+    [javac]                               ^
+    [javac] /exp/JAVA_DEV_RFAST/RFAST9_trunk/rfast9.logica/src/com/rfast9/logica/util/ReporteUtil.java:52: error: package org.apache.poi.openxml4j.exceptions does not exist
+    [javac] import org.apache.poi.openxml4j.exceptions.InvalidFormatException;
+    [javac]                                           ^
+    [javac] /exp/JAVA_DEV_RFAST/RFAST9_trunk/rfast9.logica/src/com/rfast9/logica/componente/ImprimirLogic.java:839: error: cannot find symbol
+    [javac]             XLSTransformer transformer = new XLSTransformer();
+    [javac]             ^
+    [javac]   symbol:   class XLSTransformer
+    [javac]   location: class ImprimirLogic
+    [javac] /exp/JAVA_DEV_RFAST/RFAST9_trunk/rfast9.logica/src/com/rfast9/logica/componente/ImprimirLogic.java:839: error: cannot find symbol
+    [javac]             XLSTransformer transformer = new XLSTransformer();
+    [javac]                                              ^
+    [javac]   symbol:   class XLSTransformer
+    [javac]   location: class ImprimirLogic
+    [javac] /exp/JAVA_DEV_RFAST/RFAST9_trunk/rfast9.logica/src/com/rfast9/logica/componente/ImprimirLogic.java:857: error: cannot find symbol
+    [javac] 		} catch (ParsePropertyException e) {
+    [javac] 		         ^
+    [javac]   symbol:   class ParsePropertyException
+    [javac]   location: class ImprimirLogic
+    [javac] /exp/JAVA_DEV_RFAST/RFAST9_trunk/rfast9.logica/src/com/rfast9/logica/componente/ImprimirLogic.java:859: error: cannot find symbol
+    [javac] 		} catch (InvalidFormatException e) {
+    [javac] 		         ^
+    [javac]   symbol:   class InvalidFormatException
+    [javac]   location: class ImprimirLogic
+    [javac] /exp/JAVA_DEV_RFAST/RFAST9_trunk/rfast9.logica/src/com/rfast9/logica/util/ReporteUtil.java:197: warning: non-varargs call of varargs method with inexact argument type for last parameter;
+    [javac] 							Object resultado = method.invoke(t, null);
+    [javac] 							                                    ^
+    [javac]   cast to Object for a varargs call
+    [javac]   cast to Object[] for a non-varargs call and to suppress this warning
+    [javac] Note: /exp/JAVA_DEV_RFAST/RFAST9_trunk/rfast9.logica/src/com/rfast9/logica/contabilidad/P18cuentabancariaLogic.java uses or overrides a deprecated API.
+    [javac] Note: Recompile with -Xlint:deprecation for details.
+    [javac] Note: Some input files use unchecked or unsafe operations.
+    [javac] Note: Recompile with -Xlint:unchecked for details.
+    [javac] 11 errors
+    [javac] 2 warnings
+
+
+-------------------------------------------
+Compilando el proyecto en la ruta /exp/JAVA_DEV_RFAST/RFAST9_trunk/rfast9
+
+-------------------------------------------
+Buildfile: /exp/JAVA_DEV_RFAST/RFAST9_trunk/rfast9/build.xml
+
+clean:
+   [delete] Deleting directory /exp/JAVA_DEV_RFAST/RFAST9_trunk/rfast9/build/classes
+
+build-subprojects:
+
+init:
+
+build-project:
+     [echo] rfast9.modelo: /exp/JAVA_DEV_RFAST/RFAST9_trunk/rfast9.modelo/build.xml
+
+init:
+
+build-project:
+     [echo] rfast9.general: /exp/JAVA_DEV_RFAST/RFAST9_trunk/rfast9.general/build.xml
+
+init:
+
+build-project:
+     [echo] rfast9.logica: /exp/JAVA_DEV_RFAST/RFAST9_trunk/rfast9.logica/build.xml
+
+init:
+    [mkdir] Created dir: /exp/JAVA_DEV_RFAST/RFAST9_trunk/rfast9/build/classes
+     [copy] Copying 12 files to /exp/JAVA_DEV_RFAST/RFAST9_trunk/rfast9/build/classes
+
+build-project:
+     [echo] rfast9: /exp/JAVA_DEV_RFAST/RFAST9_trunk/rfast9/build.xml
+    [javac] Compiling 557 source files to /exp/JAVA_DEV_RFAST/RFAST9_trunk/rfast9/build/classes
+    [javac] Note: /exp/JAVA_DEV_RFAST/RFAST9_trunk/rfast9/src/com/rfast9/views/utilities/FacesUtils.java uses or overrides a deprecated API.
+    [javac] Note: Recompile with -Xlint:deprecation for details.
+    [javac] Note: Some input files use unchecked or unsafe operations.
+    [javac] Note: Recompile with -Xlint:unchecked for details.
+
+build:
+
+empaquetar:
+      [jar] Building jar: /exp/JAVA_DEV_RFAST/RFAST9_trunk/rfast9/WebContent/WEB-INF/lib/rfast9.modelo.jar
+      [jar] Building jar: /exp/JAVA_DEV_RFAST/RFAST9_trunk/rfast9/WebContent/WEB-INF/lib/rfast9.logica.jar
+      [jar] Building jar: /exp/JAVA_DEV_RFAST/RFAST9_trunk/rfast9/WebContent/WEB-INF/lib/rfast9.general.jar
+
+dialect-project:
+     [echo] rfast9: /exp/JAVA_DEV_RFAST/RFAST9_trunk/rfast9/build.xml
+     [echo] /exp/JAVA_DEV_RFAST/RFAST9_trunk/rfast9/build/classes/properties/dataSource.properties
+
+build-war:
+      [war] Building war: /exp/JAVA_DEV_RFAST/RFAST9_trunk/rfast9/rfast9.war
+
+delete-jar:
+     [echo] eliminando jar para excluirlos del git.
+   [delete] Deleting: /exp/JAVA_DEV_RFAST/RFAST9_trunk/rfast9/WebContent/WEB-INF/lib/rfast9.modelo.jar
+   [delete] Deleting: /exp/JAVA_DEV_RFAST/RFAST9_trunk/rfast9/WebContent/WEB-INF/lib/rfast9.logica.jar
+   [delete] Deleting: /exp/JAVA_DEV_RFAST/RFAST9_trunk/rfast9/WebContent/WEB-INF/lib/rfast9.general.jar
+
+compilar-main:
+
+BUILD SUCCESSFUL
+Total time: 47 seconds
+
+
+-------------------------------------------
+Compilando el proyecto en la ruta /exp/JAVA_DEV/JAVA_DEV_RFAST/RFAST9_trunk/rfast9
+
+-------------------------------------------
+Buildfile: /exp/JAVA_DEV/JAVA_DEV_RFAST/RFAST9_trunk/rfast9/build.xml
+
+clean:
+   [delete] Deleting directory /exp/JAVA_DEV/JAVA_DEV_RFAST/RFAST9_trunk/rfast9/build/classes
+
+build-subprojects:
+
+init:
+
+build-project:
+     [echo] rfast9.modelo: /exp/JAVA_DEV/JAVA_DEV_RFAST/RFAST9_trunk/rfast9.modelo/build.xml
+
+init:
+
+build-project:
+     [echo] rfast9.general: /exp/JAVA_DEV/JAVA_DEV_RFAST/RFAST9_trunk/rfast9.general/build.xml
+
+init:
+
+build-project:
+     [echo] rfast9.logica: /exp/JAVA_DEV/JAVA_DEV_RFAST/RFAST9_trunk/rfast9.logica/build.xml
+
+init:
+    [mkdir] Created dir: /exp/JAVA_DEV/JAVA_DEV_RFAST/RFAST9_trunk/rfast9/build/classes
+     [copy] Copying 12 files to /exp/JAVA_DEV/JAVA_DEV_RFAST/RFAST9_trunk/rfast9/build/classes
+
+build-project:
+     [echo] rfast9: /exp/JAVA_DEV/JAVA_DEV_RFAST/RFAST9_trunk/rfast9/build.xml
+    [javac] Compiling 558 source files to /exp/JAVA_DEV/JAVA_DEV_RFAST/RFAST9_trunk/rfast9/build/classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 1.7
+    [javac] Note: /exp/JAVA_DEV/JAVA_DEV_RFAST/RFAST9_trunk/rfast9/src/com/rfast9/views/utilities/FacesUtils.java uses or overrides a deprecated API.
+    [javac] Note: Recompile with -Xlint:deprecation for details.
+    [javac] Note: Some input files use unchecked or unsafe operations.
+    [javac] Note: Recompile with -Xlint:unchecked for details.
+    [javac] 1 warning
+
+build:
+
+empaquetar:
+      [jar] Building jar: /exp/JAVA_DEV/JAVA_DEV_RFAST/RFAST9_trunk/rfast9/WebContent/WEB-INF/lib/rfast9.modelo.jar
+      [jar] Building jar: /exp/JAVA_DEV/JAVA_DEV_RFAST/RFAST9_trunk/rfast9/WebContent/WEB-INF/lib/rfast9.logica.jar
+      [jar] Building jar: /exp/JAVA_DEV/JAVA_DEV_RFAST/RFAST9_trunk/rfast9/WebContent/WEB-INF/lib/rfast9.general.jar
+
+dialect-project:
+     [echo] rfast9: /exp/JAVA_DEV/JAVA_DEV_RFAST/RFAST9_trunk/rfast9/build.xml
+     [echo] /exp/JAVA_DEV/JAVA_DEV_RFAST/RFAST9_trunk/rfast9/build/classes/properties/dataSource.properties
+
+build-war:
+      [war] Building war: /exp/JAVA_DEV/JAVA_DEV_RFAST/RFAST9_trunk/rfast9/rfast9.war
+
+delete-jar:
+     [echo] eliminando jar para excluirlos del git.
+   [delete] Deleting: /exp/JAVA_DEV/JAVA_DEV_RFAST/RFAST9_trunk/rfast9/WebContent/WEB-INF/lib/rfast9.modelo.jar
+   [delete] Deleting: /exp/JAVA_DEV/JAVA_DEV_RFAST/RFAST9_trunk/rfast9/WebContent/WEB-INF/lib/rfast9.logica.jar
+   [delete] Deleting: /exp/JAVA_DEV/JAVA_DEV_RFAST/RFAST9_trunk/rfast9/WebContent/WEB-INF/lib/rfast9.general.jar
+
+compilar-main:
+
+BUILD SUCCESSFUL
+Total time: 20 seconds
+
+
+-------------------------------------------
+Compilando el proyecto en la ruta /exp/JAVA_DEV/JAVA_DEV_RFAST/RFAST9_trunk/rfast9
+
+-------------------------------------------
+Buildfile: /exp/JAVA_DEV/JAVA_DEV_RFAST/RFAST9_trunk/rfast9/build.xml
+
+clean:
+   [delete] Deleting directory /exp/JAVA_DEV/JAVA_DEV_RFAST/RFAST9_trunk/rfast9/build/classes
+
+build-subprojects:
+
+init:
+
+build-project:
+     [echo] rfast9.modelo: /exp/JAVA_DEV/JAVA_DEV_RFAST/RFAST9_trunk/rfast9.modelo/build.xml
+
+init:
+
+build-project:
+     [echo] rfast9.general: /exp/JAVA_DEV/JAVA_DEV_RFAST/RFAST9_trunk/rfast9.general/build.xml
+
+init:
+
+build-project:
+     [echo] rfast9.logica: /exp/JAVA_DEV/JAVA_DEV_RFAST/RFAST9_trunk/rfast9.logica/build.xml
+
+init:
+    [mkdir] Created dir: /exp/JAVA_DEV/JAVA_DEV_RFAST/RFAST9_trunk/rfast9/build/classes
+     [copy] Copying 12 files to /exp/JAVA_DEV/JAVA_DEV_RFAST/RFAST9_trunk/rfast9/build/classes
+
+build-project:
+     [echo] rfast9: /exp/JAVA_DEV/JAVA_DEV_RFAST/RFAST9_trunk/rfast9/build.xml
+    [javac] Compiling 558 source files to /exp/JAVA_DEV/JAVA_DEV_RFAST/RFAST9_trunk/rfast9/build/classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 1.7
+    [javac] Note: /exp/JAVA_DEV/JAVA_DEV_RFAST/RFAST9_trunk/rfast9/src/com/rfast9/views/utilities/FacesUtils.java uses or overrides a deprecated API.
+    [javac] Note: Recompile with -Xlint:deprecation for details.
+    [javac] Note: Some input files use unchecked or unsafe operations.
+    [javac] Note: Recompile with -Xlint:unchecked for details.
+    [javac] 1 warning
+
+build:
+
+empaquetar:
+      [jar] Building jar: /exp/JAVA_DEV/JAVA_DEV_RFAST/RFAST9_trunk/rfast9/WebContent/WEB-INF/lib/rfast9.modelo.jar
+      [jar] Building jar: /exp/JAVA_DEV/JAVA_DEV_RFAST/RFAST9_trunk/rfast9/WebContent/WEB-INF/lib/rfast9.logica.jar
+      [jar] Building jar: /exp/JAVA_DEV/JAVA_DEV_RFAST/RFAST9_trunk/rfast9/WebContent/WEB-INF/lib/rfast9.general.jar
+
+dialect-project:
+     [echo] rfast9: /exp/JAVA_DEV/JAVA_DEV_RFAST/RFAST9_trunk/rfast9/build.xml
+     [echo] /exp/JAVA_DEV/JAVA_DEV_RFAST/RFAST9_trunk/rfast9/build/classes/properties/dataSource.properties
+
+build-war:
+      [war] Building war: /exp/JAVA_DEV/JAVA_DEV_RFAST/RFAST9_trunk/rfast9/rfast9.war
+
+delete-jar:
+     [echo] eliminando jar para excluirlos del git.
+   [delete] Deleting: /exp/JAVA_DEV/JAVA_DEV_RFAST/RFAST9_trunk/rfast9/WebContent/WEB-INF/lib/rfast9.modelo.jar
+   [delete] Deleting: /exp/JAVA_DEV/JAVA_DEV_RFAST/RFAST9_trunk/rfast9/WebContent/WEB-INF/lib/rfast9.logica.jar
+   [delete] Deleting: /exp/JAVA_DEV/JAVA_DEV_RFAST/RFAST9_trunk/rfast9/WebContent/WEB-INF/lib/rfast9.general.jar
+
+compilar-main:
+
+BUILD SUCCESSFUL
+Total time: 26 seconds
+
+
+-------------------------------------------
+Compilando el proyecto en la ruta /exp/JAVA_DEV/JAVA_DEV_RFAST/RFAST9_trunk/rfast9
+
+-------------------------------------------
+Buildfile: /exp/JAVA_DEV/JAVA_DEV_RFAST/RFAST9_trunk/rfast9/build.xml
+
+clean:
+   [delete] Deleting directory /exp/JAVA_DEV/JAVA_DEV_RFAST/RFAST9_trunk/rfast9/build/classes
+
+build-subprojects:
+
+init:
+
+build-project:
+     [echo] rfast9.modelo: /exp/JAVA_DEV/JAVA_DEV_RFAST/RFAST9_trunk/rfast9.modelo/build.xml
+
+init:
+
+build-project:
+     [echo] rfast9.general: /exp/JAVA_DEV/JAVA_DEV_RFAST/RFAST9_trunk/rfast9.general/build.xml
+
+init:
+
+build-project:
+     [echo] rfast9.logica: /exp/JAVA_DEV/JAVA_DEV_RFAST/RFAST9_trunk/rfast9.logica/build.xml
+
+init:
+    [mkdir] Created dir: /exp/JAVA_DEV/JAVA_DEV_RFAST/RFAST9_trunk/rfast9/build/classes
+     [copy] Copying 12 files to /exp/JAVA_DEV/JAVA_DEV_RFAST/RFAST9_trunk/rfast9/build/classes
+
+build-project:
+     [echo] rfast9: /exp/JAVA_DEV/JAVA_DEV_RFAST/RFAST9_trunk/rfast9/build.xml
+    [javac] Compiling 558 source files to /exp/JAVA_DEV/JAVA_DEV_RFAST/RFAST9_trunk/rfast9/build/classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 1.7
+    [javac] Note: /exp/JAVA_DEV/JAVA_DEV_RFAST/RFAST9_trunk/rfast9/src/com/rfast9/views/utilities/FacesUtils.java uses or overrides a deprecated API.
+    [javac] Note: Recompile with -Xlint:deprecation for details.
+    [javac] Note: Some input files use unchecked or unsafe operations.
+    [javac] Note: Recompile with -Xlint:unchecked for details.
+    [javac] 1 warning
+
+build:
+
+empaquetar:
+      [jar] Building jar: /exp/JAVA_DEV/JAVA_DEV_RFAST/RFAST9_trunk/rfast9/WebContent/WEB-INF/lib/rfast9.modelo.jar
+      [jar] Building jar: /exp/JAVA_DEV/JAVA_DEV_RFAST/RFAST9_trunk/rfast9/WebContent/WEB-INF/lib/rfast9.logica.jar
+      [jar] Building jar: /exp/JAVA_DEV/JAVA_DEV_RFAST/RFAST9_trunk/rfast9/WebContent/WEB-INF/lib/rfast9.general.jar
+
+dialect-project:
+     [echo] rfast9: /exp/JAVA_DEV/JAVA_DEV_RFAST/RFAST9_trunk/rfast9/build.xml
+     [echo] /exp/JAVA_DEV/JAVA_DEV_RFAST/RFAST9_trunk/rfast9/build/classes/properties/dataSource.properties
+
+build-war:
+      [war] Building war: /exp/JAVA_DEV/JAVA_DEV_RFAST/RFAST9_trunk/rfast9/rfast9.war
+
+delete-jar:
+     [echo] eliminando jar para excluirlos del git.
+   [delete] Deleting: /exp/JAVA_DEV/JAVA_DEV_RFAST/RFAST9_trunk/rfast9/WebContent/WEB-INF/lib/rfast9.modelo.jar
+   [delete] Deleting: /exp/JAVA_DEV/JAVA_DEV_RFAST/RFAST9_trunk/rfast9/WebContent/WEB-INF/lib/rfast9.logica.jar
+   [delete] Deleting: /exp/JAVA_DEV/JAVA_DEV_RFAST/RFAST9_trunk/rfast9/WebContent/WEB-INF/lib/rfast9.general.jar
+
+compilar-main:
+
+BUILD SUCCESSFUL
+Total time: 26 seconds
+
+
+-------------------------------------------
+Compilando el proyecto en la ruta /exp/JAVA_DEV/JAVA_DEV_RFAST/RFAST9_trunk/rfast9
+
+-------------------------------------------
+Buildfile: /exp/JAVA_DEV/JAVA_DEV_RFAST/RFAST9_trunk/rfast9/build.xml
+
+clean:
+   [delete] Deleting directory /exp/JAVA_DEV/JAVA_DEV_RFAST/RFAST9_trunk/rfast9/build/classes
+
+build-subprojects:
+
+init:
+
+build-project:
+     [echo] rfast9.modelo: /exp/JAVA_DEV/JAVA_DEV_RFAST/RFAST9_trunk/rfast9.modelo/build.xml
+
+init:
+
+build-project:
+     [echo] rfast9.general: /exp/JAVA_DEV/JAVA_DEV_RFAST/RFAST9_trunk/rfast9.general/build.xml
+
+init:
+
+build-project:
+     [echo] rfast9.logica: /exp/JAVA_DEV/JAVA_DEV_RFAST/RFAST9_trunk/rfast9.logica/build.xml
+
+init:
+    [mkdir] Created dir: /exp/JAVA_DEV/JAVA_DEV_RFAST/RFAST9_trunk/rfast9/build/classes
+     [copy] Copying 12 files to /exp/JAVA_DEV/JAVA_DEV_RFAST/RFAST9_trunk/rfast9/build/classes
+
+build-project:
+     [echo] rfast9: /exp/JAVA_DEV/JAVA_DEV_RFAST/RFAST9_trunk/rfast9/build.xml
+    [javac] Compiling 558 source files to /exp/JAVA_DEV/JAVA_DEV_RFAST/RFAST9_trunk/rfast9/build/classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 1.7
+    [javac] Note: /exp/JAVA_DEV/JAVA_DEV_RFAST/RFAST9_trunk/rfast9/src/com/rfast9/views/utilities/FacesUtils.java uses or overrides a deprecated API.
+    [javac] Note: Recompile with -Xlint:deprecation for details.
+    [javac] Note: Some input files use unchecked or unsafe operations.
+    [javac] Note: Recompile with -Xlint:unchecked for details.
+    [javac] 1 warning
+
+build:
+
+empaquetar:
+      [jar] Building jar: /exp/JAVA_DEV/JAVA_DEV_RFAST/RFAST9_trunk/rfast9/WebContent/WEB-INF/lib/rfast9.modelo.jar
+      [jar] Building jar: /exp/JAVA_DEV/JAVA_DEV_RFAST/RFAST9_trunk/rfast9/WebContent/WEB-INF/lib/rfast9.logica.jar
+      [jar] Building jar: /exp/JAVA_DEV/JAVA_DEV_RFAST/RFAST9_trunk/rfast9/WebContent/WEB-INF/lib/rfast9.general.jar
+
+dialect-project:
+     [echo] rfast9: /exp/JAVA_DEV/JAVA_DEV_RFAST/RFAST9_trunk/rfast9/build.xml
+     [echo] /exp/JAVA_DEV/JAVA_DEV_RFAST/RFAST9_trunk/rfast9/build/classes/properties/dataSource.properties
+
+build-war:
+      [war] Building war: /exp/JAVA_DEV/JAVA_DEV_RFAST/RFAST9_trunk/rfast9/rfast9.war
+
+delete-jar:
+     [echo] eliminando jar para excluirlos del git.
+   [delete] Deleting: /exp/JAVA_DEV/JAVA_DEV_RFAST/RFAST9_trunk/rfast9/WebContent/WEB-INF/lib/rfast9.modelo.jar
+   [delete] Deleting: /exp/JAVA_DEV/JAVA_DEV_RFAST/RFAST9_trunk/rfast9/WebContent/WEB-INF/lib/rfast9.logica.jar
+   [delete] Deleting: /exp/JAVA_DEV/JAVA_DEV_RFAST/RFAST9_trunk/rfast9/WebContent/WEB-INF/lib/rfast9.general.jar
+
+compilar-main:
+
+BUILD SUCCESSFUL
+Total time: 27 seconds
+
+
+-------------------------------------------
+Compilando el proyecto en la ruta /exp/JAVA_DEV/JAVA_DEV_RFAST/RFASTCOMPRAS_trunk/RFASTCOMPRAS
+
+-------------------------------------------
+Buildfile: /exp/JAVA_DEV/JAVA_DEV_RFAST/RFASTCOMPRAS_trunk/RFASTCOMPRAS/build.xml does not exist!
+
